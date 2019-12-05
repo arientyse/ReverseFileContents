@@ -48,5 +48,21 @@ public class ReverseFile {
 		
 		
 	}
+	
+	public static ArrayList<String> readLinesOfArray(Scanner in)
+	{
+		
+		ArrayList<String> lines = new ArrayList<String>();
+		
+		while(in.hasNextLine())
+		{
+			lines.add(in.nextLine());
+		}
+		
+		in.close();
+		
+		return lines;
+		
+	}
 
 }
