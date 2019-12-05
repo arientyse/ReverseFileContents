@@ -23,6 +23,8 @@ public class ReverseFile {
 	static void main(String[] args) 
 	{
 		
+		Scanner in = new Scanner(System.in);
+		
 		//Input 
 		
 		
