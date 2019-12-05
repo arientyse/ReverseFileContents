@@ -65,4 +65,30 @@ public class ReverseFile {
 		
 	}
 
+	public static void writeInReverse(String filename, ArrayList<String> lines)
+	{
+		
+		try (PrintWriter out = new PrintWriter(new File(filename)))
+		{
+			
+			for (int i = lines.size() - 1; i >= 0; i--)
+			{
+				out.println(lines.get(i));
+			}
+			
+			out.close();
+			
+		}
+		
+		catch (FileNotFoundException exception)
+		{
+			
+			System.out.println("This file could not be opened for writing. Please try again!" + filename);
+			
+		}
+		
+	}
+	
+	
+	
 }
