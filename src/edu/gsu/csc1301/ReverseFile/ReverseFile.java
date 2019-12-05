@@ -34,5 +34,19 @@ public class ReverseFile {
 		//Output
 
 	}
+	
+	public static ArrayList<String> readFile(String filename) throws IOException
+	
+	{
+		File inFile = new File(filename);
+		try (Scanner in = new Scanner(inFile))
+		{
+				
+			return readLinesOfArray(in);
+			
+		}
+		
+		
+	}
 
 }
