@@ -1,16 +1,26 @@
 package edu.gsu.csc1301.ReverseFile;
 
 /**
- * @author Ari
+ * 
+ * This program with take in a file as input, reverse the order of the lines with in the file,
+ * and produce an output file with the new order of the lines.
+ * 
+ * @author Ariana Tyson
+ * @version 12/2/2019
  *
  */
 public class ReverseFile {
-
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+	static void main(String[] args) 
+	{
+		
+		//Input 
+		
+		
+		//Computation
+		
+		
+		//Output
 
 	}
 
