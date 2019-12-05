@@ -29,9 +29,6 @@ public class ReverseFile {
 		String outputFileName;
 		
 		
-		//Input 
-		
-		
 		//Computation
 		
 		boolean done = false;
@@ -43,21 +40,23 @@ public class ReverseFile {
 			
 			try {
 				
-				System.out.print("Please enter the file name for input: ");
+				System.out.print("Please enter the file name for input: "); //Prompts the user to enter a file name for input
 				inputFileName = in.next();
 				
-				ArrayList<String> lines = readFile(inputFileName);
+				ArrayList<String> lines = readFile(inputFileName); //The system reads the input file
 				
-				System.out.print("Please enter file name for output: ");
+				System.out.print("Please enter file name for output: "); //Prompts the user to enter a name for output
 				outputFileName = in.next();
 				
-				writeInReverse(outputFileName, lines);
+				writeInReverse(outputFileName, lines); //Runs the writeInReverse() method to reverse the order of input lines
 				
 				done = true;
 				
 				in.close();
 								
 			}
+			
+			//Exception handling output statement are below
 			
 			catch (FileNotFoundException exception)
 			{
@@ -82,6 +81,16 @@ public class ReverseFile {
 
 	}
 	
+	/*
+	 * 
+	 * This method crates an ArrayList of type String for the lines of the input file to be stores in
+	 * 
+	 * @param filename
+	 * 
+	 * @return readLinesofArray()
+	 * 
+	 */
+	
 	public static ArrayList<String> readFile(String filename) throws IOException
 	
 	{
@@ -95,6 +104,16 @@ public class ReverseFile {
 		
 		
 	}
+	
+	/*
+	 * 
+	 * This method creates the ArrayList<String> lines and stores the lines of the input file into the list
+	 * 
+	 * @param in
+	 * 
+	 * @return lines
+	 * 
+	 */
 	
 	public static ArrayList<String> readLinesOfArray(Scanner in)
 	{
@@ -112,6 +131,14 @@ public class ReverseFile {
 		
 	}
 
+	/*
+	 * 
+	 * This method uses the created ArrayList to reverse the order of the lines in the original input file
+	 * 
+	 * @param filename, lines
+	 * 
+	 */
+	
 	public static void writeInReverse(String filename, ArrayList<String> lines)
 	{
 		
