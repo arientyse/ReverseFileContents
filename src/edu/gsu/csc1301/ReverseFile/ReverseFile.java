@@ -25,13 +25,60 @@ public class ReverseFile {
 		
 		Scanner in = new Scanner(System.in);
 		
+		String inputFileName;
+		String outputFileName;
+		
+		
 		//Input 
 		
 		
 		//Computation
 		
+		boolean done = false;
 		
 		//Output
+		
+		while(!done)
+		{
+			
+			try {
+				
+				System.out.print("Please enter the file name for input: ");
+				inputFileName = in.next();
+				
+				ArrayList<String> lines = readFile(inputFileName);
+				
+				System.out.print("Please enter file name for output: ");
+				outputFileName = in.next();
+				
+				writeInReverse(outputFileName, lines);
+				
+				done = true;
+				
+				in.close();
+								
+			}
+			
+			catch (FileNotFoundException exception)
+			{
+				
+				System.out.println("File not found.");
+				
+			}
+			
+			catch (NoSuchElementException exception)
+			{
+				
+				System.out.println("File contents invalid.");
+				
+			}
+			
+			catch (IOException exception)
+			{
+				exception.printStackTrace();
+			}
+			
+		}
 
 	}
 	
